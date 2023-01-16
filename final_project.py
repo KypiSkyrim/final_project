@@ -5,6 +5,8 @@ import csv
 import matplotlib.pyplot as plt
 
 
+df = pd.read_csv('spotify_songs_top_100.csv')
+
 #0
 def date_change(str_date: str) -> str:
   """Функция перевода даты в формат через точку."""
@@ -22,7 +24,6 @@ def form(df: Any) -> str:
   return print(result_date)
 
 
-df = pd.read_csv('spotify_songs_top_100.csv')
 form(df)
 
 
@@ -42,7 +43,6 @@ def ed_sheeran_song(df: Any) -> Any:
   artist.to_json('Song.json') 
 
 
-df = pd.read_csv('spotify_songs_top_100.csv')
 ed_sheeran_song(df)
 
 
@@ -56,7 +56,6 @@ def the_oldest(df: Any) -> Any:
   release.to_json('Release Date.json') 
 
 
-df = pd.read_csv('spotify_songs_top_100.csv')
 the_oldest(df)
 
 
@@ -74,7 +73,6 @@ def summation(df: Any) -> Any:
   streams.to_json('Streams (Billions).json')
 
 
-df = pd.read_csv('spotify_songs_top_100.csv')
 summation(df)
 
 
@@ -97,5 +95,4 @@ def histogram(df: Any) -> Any:
   plt.show
 
 
-df = pd.read_csv('spotify_songs_top_100.csv')
 histogram(df)
